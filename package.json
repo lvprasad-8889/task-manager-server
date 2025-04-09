@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "set NODE_ENV=production && node server.js",
-    "dev": "set NODE_ENV=development && nodemon server",
-    "build": "cd .. && npm run build"
+    "dev": "set NODE_ENV=development && nodemon server"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
