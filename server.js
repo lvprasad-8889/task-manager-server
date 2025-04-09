@@ -60,13 +60,15 @@ mongoose
   .catch((err) => console.log("MongoDB Connection Error:", err));
 
 // API Routes
-app.use("/", (req, res) => {
-  res.send("Hello world");
-});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/notifications", notificationRoutes);
+
+app.use("*", (req, res) => {
+  res.send("Hello world yaar");
+});
 
 // Start server
 server.listen(PORT, () => {
