@@ -67,7 +67,7 @@ app.use("/api/categories", categoryRoutes);
 app.use("/api/notifications", notificationRoutes);
 
 app.use("*", (req, res) => {
-  res.send("Hello world yaar");
+  res.send("Hello world");
 });
 
 // Start server
