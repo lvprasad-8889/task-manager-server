@@ -41,6 +41,7 @@ const authRoutes = require("./routes/auth.routes");
 const taskRoutes = require("./routes/task.routes");
 const categoryRoutes = require("./routes/category.routes");
 const notificationRoutes = require("./routes/notification.routes");
+const authMiddleware = require("./middleware/auth");
 
 // Create Express app
 const PORT = process.env.PORT || 3000;
@@ -60,6 +61,7 @@ mongoose
   .catch((err) => console.log("MongoDB Connection Error:", err));
 
 // API Routes
+
 
 app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
